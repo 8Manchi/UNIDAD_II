@@ -1,0 +1,47 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Potentiometer" CircId="Potentiometer-6" mainComp="false" ShowProp="Resistance" Show_id="true" Show_Val="true" Pos="84,-36" rotation="-90" hflip="-1" vflip="1" label="Potenciometro" idLabPos="29.3248,-74.693" labelrot="90" valLabPos="-12.4239,-31.4813" valLabRot="-270" Resistance="10 kΩ" Value_Ohm="5380 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-7" mainComp="false" Show_id="true" Show_Val="false" Pos="84,-124" rotation="90" hflip="-1" vflip="1" label="Entrada de voltaje" idLabPos="-134.505,-38.5487" labelrot="270" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-27" mainComp="false" Show_id="true" Show_Val="false" Pos="84,48" rotation="0" hflip="1" vflip="1" label="Salida GND" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega328-32" mainComp="false" Show_id="true" Show_Val="false" Pos="-116,-156" rotation="0" hflip="1" vflip="1" label="Atmega328" idLabPos="-9.67454,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Documentos/Arduino/PWM/build/arduino.avr.uno/PWM.ino.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="elCapacitor" CircId="elCapacitor-35" mainComp="false" ShowProp="Capacitance" Show_id="true" Show_Val="true" Pos="36,-40" rotation="90" hflip="1" vflip="1" label="Condensador electrolítico" idLabPos="-46.2165,63.2922" labelrot="270" valLabPos="-9.84478,37.3357" valLabRot="-90" Capacitance="100 µF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
+
+<item itemtype="Resistor" CircId="Resistor-39" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-56,-16" rotation="90" hflip="1" vflip="1" label="Resistor-39" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Led" CircId="Led-40" mainComp="false" Show_id="true" Show_Val="false" Pos="-40,24" rotation="0" hflip="1" vflip="1" label="Le" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Node" CircId="Node-34" mainComp="false" Pos="84,24" />
+
+<item itemtype="Node" CircId="Node-38" mainComp="false" Pos="84,-88" />
+
+<item itemtype="Node" CircId="Node-41" mainComp="false" Pos="36,24" />
+
+<item itemtype="Connector" uid="Connector-78" startpinid="Ground-27-Gnd" endpinid="Node-34-0" pointList="84,32,84,24" />
+
+<item itemtype="Connector" uid="Connector-79" startpinid="Node-34-2" endpinid="Potentiometer-6-PinA" pointList="84,24,84,-20" />
+
+<item itemtype="Connector" uid="Connector-80" startpinid="elCapacitor-35-lPin" endpinid="mega328-32-PORTV1" pointList="36,-56,36,-92,-76,-92" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="mega328-32-PORTC0" endpinid="Potentiometer-6-PinM" pointList="-76,-108,56,-108,56,-36,68,-36" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="mega328-32-PORTV0" endpinid="Node-38-1" pointList="-76,-84,84,-84,84,-88" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="Fixed Voltage-7-outnod" endpinid="Node-38-0" pointList="84,-108,84,-88" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Node-38-2" endpinid="Potentiometer-6-PinB" pointList="84,-88,84,-52" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Resistor-39-lPin" endpinid="mega328-32-PORTB1" pointList="-56,-32,-56,-44,-76,-44" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Led-40-lPin" endpinid="Resistor-39-rPin" pointList="-56,24,-56,0" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="Led-40-rPin" endpinid="Node-41-1" pointList="-24,24,36,24" />
+
+<item itemtype="Connector" uid="Connector-97" startpinid="elCapacitor-35-rPin" endpinid="Node-41-0" pointList="36,-24,36,24" />
+
+<item itemtype="Connector" uid="Connector-98" startpinid="Node-41-2" endpinid="Node-34-1" pointList="36,24,84,24" />
+
+</circuit>
